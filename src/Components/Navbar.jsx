@@ -9,8 +9,14 @@ import logo from '../assets/Logo.png'
 export default function Navbar(props)
 {
 
+    const [section, setSection] = useState ("1")
     const [openMenu, setOpenMenu] = useState(false)
     const scrollPosition = useScrollPosition();
+    // console.log(scrollPosition)
+    function handleSection (event)
+    {
+        setSection(event.target.id)
+    }
 
     function toggleMenu ()
     {
